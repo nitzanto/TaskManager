@@ -1,0 +1,56 @@
+<!-- ניצן טולדו - I.D. 324247840
+עומרי פיינגולד - I.D. 318913456 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading Screen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .loading-screen {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f1f1;
+            font-family: 'Poppins', sans-serif;
+            background-image: url(images/doge.gif);
+        }
+
+        .loading-title {
+            color:whitesmoke;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: loading 1s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <h1 class="loading-title">Loading...</h1>
+    </div>
+
+    <script>
+        // Wait for 5 seconds before redirecting to the task manager page
+        setTimeout(function() {
+            window.location.href = "task-manager.html";
+        }, 5000);
+    </script>
+</body>
+</html>
